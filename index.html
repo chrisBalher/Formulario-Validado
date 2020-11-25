@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validacion de Datos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Registrate Hoy!</h1>
+        <!-- Form -->
+        <form id="form" >
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" placeholder="Nombre Completo" name="name" required minlength="3" maxlength="32">
+            </div>
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Número Celular</label>
+                <input type="tel" id="phone" name="phone" placeholder="555555555" required pattern="[0-9]{9}" maxlength="9">
+            </div>
+            <!-- Email Adress -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="usuario@hostname.tld" required>
+            </div>    
+            <!-- Website URL -->
+            <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="https://sportech.pe" required name="website">
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password1"> Contraseña </label>
+                <input type="password" id="password1" placeholder="Crea una COntraseña" required name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Porfavor incluya en su contraseña al menos 1 letra mayuscula, 1 minuscula y 1 numero">
+            </div>
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="password2"> Confirmar Contraseña </label>
+                <input type="password" id="password2" placeholder="Confirmar una COntraseña" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <button type="sumbit">Registrar</button>
+            <!-- Error/Succes Message -->
+            <div class="message-container">
+                <h3 id="message">No lo dudes!</h3>
+            </div>
+        </form>
+        
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
